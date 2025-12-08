@@ -58,7 +58,7 @@ cols = [
     "Government_Effectiveness",
     "Regulatory_Quality",
     "GDP",
-    "Labour_Force_Participation_Rate",
+    "Labour_Force_Total",
     "Tax_Revenue_GDP",
     "Agriculture_GDP",
     "Trade_Openness_GDP",
@@ -497,12 +497,12 @@ try:
                 labor_long = labor_long.drop(columns=[series_col])
             
             # Remove duplicates and convert to numeric (handle ".." as NaN)
-            labor_long['Labour_Force_Participation_Rate'] = pd.to_numeric(labor_long['Labour_Force_Participation_Rate'], errors='coerce')
-            labor_long = labor_long.dropna(subset=['Country', 'Year', 'Labour_Force_Participation_Rate'])
+            labor_long['Labour_Force_Total'] = pd.to_numeric(labor_long['Labour_Force_Total'], errors='coerce')
+            labor_long = labor_long.dropna(subset=['Country', 'Year', 'Labour_Force_Total'])
             labor_long = labor_long.drop_duplicates(subset=['Country', 'Year'], keep='last')
             
             if not labor_long.empty:
-                master = safe_merge(master, labor_long[['Country', 'Year', 'Labour_Force_Participation_Rate']], 'Labour_Force_Participation_Rate')
+                master = safe_merge(master, labor_long[['Country', 'Year', 'Labour_Force_Total']], 'Labour_Force_Total')
             else:
                 print("  ⚠ No Labor Force data found after filtering")
                 
