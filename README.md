@@ -111,7 +111,6 @@ The following Python libraries are required:
 **File Handling:**
 - `openpyxl` - Reading and writing Excel files (.xlsx)
 
-   ```
 ### 2. Data Preparation
 
 Before running the machine learning models, ensure the data files are in the correct location:
