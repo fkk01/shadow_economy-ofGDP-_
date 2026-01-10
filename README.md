@@ -32,7 +32,7 @@ Multiple algorithms are applied and compared, including XGBoost, CatBoost, Suppo
   - SVR
   - Random Forest  
 
-  The dataset includes transformed variables, missing values, and missing-value indicators.
+  The dataset includes transformed variables,target variable, missing values, and missing-value indicators.
 
 - `data/df_elastic_net.xlsx`  
   Final dataset used for Elastic Net models.  
