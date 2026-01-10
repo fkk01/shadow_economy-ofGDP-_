@@ -77,10 +77,6 @@ FILE_PATH_PREFIX = 'data/cause variables/'
 
 print("Starting data merging process...")
 print(f"Master panel shape: {master.shape}\n")
-
-# ============================================
-# Helper functions
-# ============================================
 def normalize_country_names(df, country_col):
     """Normalize country names from data files to match our country list."""
     df[country_col] = df[country_col].str.strip()
@@ -155,7 +151,7 @@ except Exception as e:
     print(f"  ✗ Error: {e}")
 
 # ============================================
-# 2. CPI - Inflation
+# 2. Inflation
 # ============================================
 print("\n2. Processing CPI (Inflation) data...")
 try:
